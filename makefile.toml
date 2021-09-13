@@ -1,0 +1,13 @@
+[tasks.serve]
+install_crate = "trunk"
+command = "trunk"
+args = ["serve"]
+
+[tasks.build]
+install_crate = "trunk"
+command = "trunk"
+args = ["build", "--release"]
+
+[tasks.deploy]
+command = "git"
+args = ["subtree", "push", "--prefix", "dist", "origin", "gh-pages"]
